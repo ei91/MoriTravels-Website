@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="moriTravels.css"> <!-- Reference to your CSS file -->
+    <link rel="script" href="moriTravels.js"> <!-- Link to your JS file -->
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body class = "review-page-background">
+
+    <style>
+        .font-colour {
+            color: #2c3e50;
+            font-weight: bolder;
+        }
+
+/* Full-Page Background Styling */
+.review-page-background {
+    background-image: url('/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    
+}
+    </style>
+
+    <!-- Navigation bar fixed at the top -->
+    <nav>
+        <!-- Logo linked to moritravel.html -->
+        <a href="index.html"><img src="/M.png" alt="logo" class="logo"></a>
+        <div class="text-box">
+            <h1>Mori Travels</h1>
+        </div>
+        <div class="navigation-links">
+            <ul>
+                <li><a href="about-page.html"><i class="fas fa-info-circle"></i> About Me</a></li>
+                <li><a href="plantrip.html"><i class="fas fa-map-marked-alt"></i> Plan a Trip</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><i class="fas fa-globe"></i> Language</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                        <a href="#" onclick="changeLanguage('zh')">中文 (Mandarin)</a>
+                        <a href="#" onclick="changeLanguage('es')">Español (Spanish)</a>
+                        <a href="#" onclick="changeLanguage('hi')">हिन्दी (Hindi)</a>
+                        <a href="#" onclick="changeLanguage('ar')">العربية (Arabic)</a>
+                        <a href="#" onclick="changeLanguage('pt')">Português (Portuguese)</a>
+                        <a href="#" onclick="changeLanguage('bn')">বাংলা (Bengali)</a>
+                        <a href="#" onclick="changeLanguage('ru')">Русский (Russian)</a>
+                        <a href="#" onclick="changeLanguage('ja')">日本語 (Japanese)</a>
+                        <a href="#" onclick="changeLanguage('fr')">Français (French)</a>
+                        <a href="#" onclick="changeLanguage('de')">Deutsch (German)</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><i class="fas fa-bars"></i></a> <!-- Hamburger Icon -->
+                    <div class="dropdown-content">
+                        <a href="leaveReview.html">Leave a Review</a>
+                        <a href="index.html#mailing-list">Join our Mailing List</a>
+                        <a href ="privacy-policy.html"> Private Policies</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Hamburger menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Review Section -->
+    <section class="review-section">
+        <div class="reviews-display">
+            <h2>What Our Clients Say</h2>
+            <br>
+            <div class="review">
+                <h3>John Doe</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Booking with Mori was a fantastic experience! The trip was perfectly planned, and every detail was taken care of. Highly recommend!"</p>
+            </div>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Mori provided an exceptional service. From start to finish, everything was seamless. I will definitely use Mori's services again."</p>
+            </div>
+            <div class="review">
+                <h3>Emily Johnson</h3>
+                <div class="stars">★★★★★</div>
+                <p>"The level of expertise and personalized attention Mori provided made our vacation unforgettable. Five stars all the way!"</p>
+            </div>
+            <div class="review">
+                <h3>Michael Brown</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Mori's travel planning was top-notch. Every detail was handled with care, making our trip stress-free and enjoyable."</p>
+            </div>
+            <div class="review">
+                <h3>Sarah Wilson</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Excellent service and a memorable trip! Mori's attention to detail and customer care is truly exceptional."</p>
+            </div>
+        </div>
+
+        <!-- Review Form -->
+        <div class="review-form-container">
+            <h2>Leave a Review</h2>
+            <form action="submitReview.php" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="moriTravels.js"></script> <!-- Link to your JS file -->
+</body>
+
+</html>

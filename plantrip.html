@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan My Trip</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="moriTravels.css"> <!-- Reference to your CSS file -->
+    <link rel ="script" href= "moriTravels.js">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+<body>
+<!-- Navigation bar fixed at the top -->
+<nav>
+    <!-- Logo linked to moritravel.html -->
+    <a href="index.html"><img src="/M.png" alt="logo" class="logo"></a>
+    <div class="text-box">
+        <h1>Mori Travels</h1>
+    </div>
+    <div class="navigation-links">
+        <ul>
+            <li><a href="about-page.html"><i class="fas fa-info-circle"></i> About Me</a></li>
+            <li><a href="plantrip.html"><i class="fas fa-map-marked-alt"></i> Plan a Trip</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-globe"></i> Language</a> <!-- Globe icon for language -->
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')">English</a>
+                <a href="#" onclick="changeLanguage('zh')">中文 (Mandarin)</a>
+                <a href="#" onclick="changeLanguage('es')">Español (Spanish)</a>
+                <a href="#" onclick="changeLanguage('hi')">हिन्दी (Hindi)</a>
+                <a href="#" onclick="changeLanguage('ar')">العربية (Arabic)</a>
+                <a href="#" onclick="changeLanguage('pt')">Português (Portuguese)</a>
+                <a href="#" onclick="changeLanguage('bn')">বাংলা (Bengali)</a>
+                <a href="#" onclick="changeLanguage('ru')">Русский (Russian)</a>
+                <a href="#" onclick="changeLanguage('ja')">日本語 (Japanese)</a>
+                <a href="#" onclick="changeLanguage('fr')">Français (French)</a>
+                <a href="#" onclick="changeLanguage('de')">Deutsch (German)</a>
+            </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-bars"></i></a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="leaveReview.html">Leave a Review</a>
+                    <a href="index.html#mailing-list">Join our Mailing List</a>
+                    <a href ="privacy-policy.html"> Private Policies</a>
+                  
+                  
+                </div>
+            </li>
+            <!-- Language Selector Dropdown -->
+        </ul>
+    </div>
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<script>
+    flatpickr("#date-range", {
+        mode: "range",
+        dateFormat: "Y-m-d",
+        onClose: function(selectedDates) {
+            if (selectedDates.length === 2) {
+                const startDate = selectedDates[0].toISOString().split('T')[0]; // Get start date
+                const endDate = selectedDates[1].toISOString().split('T')[0]; // Get end date
+                document.getElementById("start-date").value = startDate; // Set hidden input
+                document.getElementById("end-date").value = endDate; // Set hidden input
+            }
+        }
+    });
+</script>
+
+       
+        <!-- Background Image Container -->
+        <div class="pmtBackground">
+            <img src="/tokyo.jpg" alt="Tokyo Background">
+        </div>
+
+    <!-- Form Section -->
+<div class="form-container">
+    <h2 class="headline">Help us understand your travel plans, and we’ll create the perfect itinerary for you!</h2>
+    <form action="/moriemails.php" method="POST">
+        <label for="fullname">
+            <i class="fas fa-user"></i> Full Name<span style="color:red;">*</span>
+        </label>
+        <input type="text" id="fullname" name="fullname" placeholder="David Chan" required>
+        
+        <label for="email">
+            <i class="fas fa-envelope"></i> Email<span style="color:red;">*</span>
+        </label>
+        <input type="email" id="email" name="email" placeholder="david.chan@example.com" required>
+        
+        <label for="phone">
+            <i class="fas fa-phone"></i> Phone Number<span style="color:red;">*</span>
+        </label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+        <label for="destination">
+            <i class="fas fa-map-marker-alt"></i> Destination<span style="color:red;">*</span>
+        </label>
+        <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
+        
+        <label for="resort">
+            <i class="fas fa-hotel"></i> Resort/Hotel Preference
+        </label>
+        <select id="resort" name="resort">
+            <option value="" disabled selected>Select an option</option>
+            <option value="single">Single Room</option>
+    <option value="double">Double Room</option>
+    <option value="twin">Twin Room</option>
+    <option value="triple">Triple Room</option>
+    <option value="quad">Quad Room</option>
+    <option value="suite">Suite</option>
+    <option value="junior-suite">Junior Suite</option>
+    <option value="deluxe">Deluxe Room</option>
+    <option value="executive">Executive Room</option>
+    <option value="family">Family Room</option>
+    <option value="accessible">Accessible Room</option>
+    <option value="penthouse">Penthouse</option>
+    <option value="honeymoon-suite">Honeymoon Suite</option>
+    <option value="corner-room">Corner Room</option>
+    <option value="standard">Standard Room </option>\
+    
+    <option value="dormitory">Dormitory Room</option>
+        </select>
+        <label for="date-range">
+            <i class="fas fa-calendar-alt"></i> Duration
+        </label>
+        <input type="text" id="date-range" name="date-range" placeholder="Select dates" readonly>
+        <input type="hidden" id="start-date" name="start-date">
+        <input type="hidden" id="end-date" name="end-date">
+        
+        
+        <label for="travelers">
+            <i class="fas fa-users"></i> Travelers<span style="color:red;">*</span>
+        </label>
+        <input type="text" id="travelers" name="travelers" placeholder="Number of Passengers (Adults & Children)" required>
+        
+        <label for="budget">
+            <i class="fas fa-dollar-sign"></i> Budget<span style="color:red;">*</span>
+        </label>
+        <input type="text" id="budget" name="budget" placeholder="Budget" required>
+        
+        <label for="enquiry">
+            <i class="fas fa-comment-dots"></i> Further Enquiry
+        </label>
+        <textarea id="enquiry" name="enquiry" placeholder="Enquiry"></textarea>
+        
+        <button type="submit" class="cta-button">Let's Start Planning!</button>
+    </form>
+</div>
+    </section>
+    
+
+    <!-- Add FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="moriTravels.js"></script> <!-- Your existing JS file -->
+    <style>
+        /* Apply color to all Font Awesome icons */
+.fas, .fab, .fal, .far, .fad {
+    color: #C5DDFF; /* Light blue color */
+}
+
+    </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr("#date-range", {
+            mode: "range",
+            dateFormat: "d/m/Y",
+            onChange: function(selectedDates, dateStr, instance) {
+                if (selectedDates.length === 2) {
+                    let startDate = selectedDates[0];
+                    let endDate = selectedDates[1];
+                    
+                    // Format the date to the required format (e.g., dd/mm/yy)
+                    let formattedStartDate = flatpickr.formatDate(startDate, "d/m/y");
+                    let formattedEndDate = flatpickr.formatDate(endDate, "d/m/y");
+                    
+                    // Set the formatted dates in the hidden inputs
+                    document.getElementById("start-date").value = formattedStartDate;
+                    document.getElementById("end-date").value = formattedEndDate;
+                    
+                    // Optionally, update the visible input field with the formatted range
+                    document.getElementById("date-range").value = `${formattedStartDate} - ${formattedEndDate}`;
+
+                    
+                }
+            }
+        });
+        
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // just for formatting/placeholders etc
+            preferredCountries: ["us", "gb"], // Default preferred countries
+            separateDialCode: true, // Separate dial code from number
+            initialCountry: "auto", // Automatically detect the user's country
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io/json')
+                    .then(response => response.json())
+                    .then(data => callback(data.country))
+                    .catch(() => callback('us'));
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

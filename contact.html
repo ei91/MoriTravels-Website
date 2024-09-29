@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="moriTravels.css"> <!-- Reference to your CSS file -->
+    <link rel ="script" href= "moriTravels.js">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <style>
+        .font-colour{color: #2c3e50;
+            font-weight: bolder;
+
+        }
+    </style>
+<!-- Navigation bar fixed at the top -->
+<nav>
+    <!-- Logo linked to moritravel.html -->
+    <a href="index.html"><img src="/M.png" alt="logo" class="logo"></a>
+    <div class="text-box">
+        <h1>Mori Travels</h1>
+    </div>
+    <div class="navigation-links">
+        <ul>
+            <li><a href="about-page.html"><i class="fas fa-info-circle"></i> About Me</a></li>
+            <li><a href="plantrip.html"><i class="fas fa-map-marked-alt"></i> Plan a Trip</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-globe"></i> Language</a> <!-- Globe icon for language -->
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')">English</a>
+                <a href="#" onclick="changeLanguage('zh')">中文 (Mandarin)</a>
+                <a href="#" onclick="changeLanguage('es')">Español (Spanish)</a>
+                <a href="#" onclick="changeLanguage('hi')">हिन्दी (Hindi)</a>
+                <a href="#" onclick="changeLanguage('ar')">العربية (Arabic)</a>
+                <a href="#" onclick="changeLanguage('pt')">Português (Portuguese)</a>
+                <a href="#" onclick="changeLanguage('bn')">বাংলা (Bengali)</a>
+                <a href="#" onclick="changeLanguage('ru')">Русский (Russian)</a>
+                <a href="#" onclick="changeLanguage('ja')">日本語 (Japanese)</a>
+                <a href="#" onclick="changeLanguage('fr')">Français (French)</a>
+                <a href="#" onclick="changeLanguage('de')">Deutsch (German)</a>
+            </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-bars"></i></a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="leaveReview.html">Leave a Review</a>
+                    <a href="index.html#mailing-list">Join our Mailing List</a>
+                    <a href ="privacy-policy.html"> Private Policies</a>
+                  
+                </div>
+            </li>
+            <!-- Language Selector Dropdown -->
+        </ul>
+    </div>
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+     
+        <!-- Background Image Container -->
+        <div class="contact-background">
+            <img src="/arindam-saha-PwzISwC2kLs-unsplash.jpg" alt="Contact Background">
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="main-content">
+            <!-- Additional Information Section -->
+            <section id="about-us" class="additional-info">
+                <h2>About Us</h2>
+                <p>At Mori Independent Travel Expert, we are dedicated to crafting personalized travel experiences that cater to your unique needs and desires. Whether you're planning an adventurous getaway, a relaxing retreat, or an immersive cultural journey, we are here to make your travel dreams a reality.
+
+                We understand the importance of staying connected, which is why we offer multiple ways for you to reach us. You can contact us via email, X (formerly Twitter), or Instagram. Our team is committed to providing timely responses, and you can expect to hear back from us within 1-3 business days.
+
+                Your journey begins the moment you get in touch, and we’re here to assist you every step of the way. Whether you have questions, need recommendations, or are ready to book your next adventure, don’t hesitate to reach out. Let’s explore the world together!</p>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact" class="contact-form-wrapper">
+                <h2 class="font-colour">Get in Touch!</h2>
+        
+                <p class="font-colour" >Telephone : 08000 465 117</p>
+                <br>
+                <p class="font-colour">Email: <a href="mailto:mori.idowu@ite.travel">mori.idowu@ite.travel</a></p><br>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/MoriTravelExpert"><img src="/fb-icon.png" alt="Facebook"> </a>
+                    <a href="https://x.com/ExpertMori"><img src="/twitter_icon.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/moritravelexpert/"><img src="/insta-icon.png" alt="Instagram"></a>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What destinations do you offer?</h3>
+                    <p>We offer a wide range of destinations around the world, including popular spots and hidden gems.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I book a trip?</h3>
+                    <p>You can book a trip through our website, by calling our office, or by sending us an email.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is your cancellation policy?</h3>
+                    <p>Our cancellation policy varies depending on the type of booking. Generally, cancellations made more than 30 days in advance will incur a fee, while those made closer to the departure date may be non-refundable.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there any age restrictions for my trips?</h3>
+                    <p>Most of our trips accomondate all ages, but some may have specific age requirements or recommendations. Please check the details sent about your trip after youve filled in the plan my trip form.</p>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>

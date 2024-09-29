@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    
+    <!-- Google Fonts: Montserrat for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="moriTravels.css"> <!-- Link to your custom CSS file -->
+    <link rel="script" href="moriTravels.js"> <!-- Link to your custom JavaScript file -->
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper.js CSS for carousel functionality -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <style>
+        /* Styles for the mailing list section with a background image */
+        .mailing-list-section {
+            position: relative;
+            background-image: url('/jakob-owens-9f-EzRn8Ogo-unsplash.jpg'); /* Background image for the section */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            min-height: 100vh; /* Minimum height of the section */
+            width: 100%; /* Full width */
+            padding: 50px 20px; /* Padding around the content */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+            text-align: center; /* Center text within the section */
+        }
+    </style>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo linked to the home page -->
+        <a href="index.html"><img src="/M.png" alt="logo" class="logo"></a>
+        <div class="text-box">
+            <h1>Mori Travels</h1>
+        </div>
+        <div class="navigation-links">
+            <ul>
+                <li><a href="about-page.html"><i class="fas fa-info-circle"></i> About Me</a></li>
+                <li><a href="plantrip.html"><i class="fas fa-map-marked-alt"></i> Plan a Trip</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><i class="fas fa-globe"></i> Language</a> <!-- Globe icon for language -->
+                    <div class="dropdown-content">
+                        <a href="#" data-language="en">English</a>
+                        <a href="#" data-language="zh">中文 (Mandarin)</a>
+                        <a href="#" data-language="es">Español (Spanish)</a>
+                        <a href="#" data-language="hi">हिन्दी (Hindi)</a>
+                        <a href="#" data-language="ar">العربية (Arabic)</a>
+                        <a href="#" data-language="pt">Português (Portuguese)</a>
+                        <a href="#" data-language="bn">বাংলা (Bengali)</a>
+                        <a href="#" data-language="ru">Русский (Russian)</a>
+                        <a href="#" data-language="ja">日本語 (Japanese)</a>
+                        <a href="#" data-language="fr">Français (French)</a>
+                        <a href="#" data-language="de">Deutsch (German)</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><i class="fas fa-bars"></i></a> <!-- Hamburger icon -->
+                    <div class="dropdown-content">
+                        <a href="leaveReview.html">Leave a Review</a>
+                        <a href="#mailing-list">Join our Mailing List</a> 
+                        <a href="privacy-policy.html">Privacy Policies</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Hamburger Menu for Mobile Navigation -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Background Video Section -->
+    <div class="page-background-video">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline>
+            <source src="/11957603-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay Text Box -->
+        <div class="home-textbox">
+            <h1>Your dream vacation is waiting...</h1>
+            <p>Let Mori be your personal travel advisor today!</p>
+            <a href="plantrip.html" class="herobtn" id="planTripBtn">Plan my trip</a>
+        </div>
+    </div>
+
+    <!-- Featured Destinations Section -->
+    <div class="featured-destinations" id="destinations-section">
+        <h1 class="swiper-title">Our Clients' Top Destinations</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Each destination as a swiper slide -->
+                <div class="swiper-slide">
+                    <img src="/daniel-plan-OE7jKpsk7uU-unsplash.jpg" alt="Vienna">
+                    <div class="destination-text">
+                        Vienna, the capital of Austria, is a city of imperial grandeur and vibrant culture. Known for its opulent palaces, historic coffeehouses, and classical music heritage, Vienna offers a blend of elegance and charm. Stroll through the ornate Schönbrunn Palace, where the Habsburgs once resided, enjoy a concert at the world-renowned Vienna State Opera, or relax in the serene Stadtpark amidst statues of famous composers like Johann Strauss. With its rich history, stunning architecture, and culinary delights such as Sachertorte and Wiener Schnitzel, Vienna promises an unforgettable experience that harmoniously marries the past with the present.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/hector-mavare-P6Re2Z_lhfQ-unsplash.jpg" alt="Cancun">
+                    <div class="destination-text">
+                        Cancun is a vibrant paradise on Mexico's Yucatán Peninsula, known for its turquoise waters, powdery white-sand beaches, and rich Mayan heritage. Whether you're exploring the ancient ruins of Tulum perched dramatically above the sea, snorkeling in the vibrant coral reefs of Isla Mujeres, or enjoying the lively nightlife in the Hotel Zone, Cancun offers a perfect blend of relaxation and adventure. Indulge in world-class resorts, savor the flavors of authentic Mexican cuisine from street tacos to fine dining, and bask in the warm Caribbean sun. Cancun is a destination that invites you to experience the best of both relaxation and cultural discovery.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" alt="Bern">
+                    <div class="destination-text">
+                        Bern, the capital of Switzerland, is a picturesque city with a captivating blend of medieval charm and modern vibrancy. Its well-preserved old town, a UNESCO World Heritage site, features cobblestone streets, historic arcades, and the iconic Zytglogge clock tower, which has been marking time since the 13th century. Stroll along the Aare River, where you can enjoy a swim in its crystal-clear waters, explore the Bear Park that gives the city its name, or visit the Einstein Museum to delve into the life of the famous physicist who once lived here. With its relaxed atmosphere, vibrant cultural scene, and stunning architecture, Bern offers a delightful retreat in the heart of Switzerland, blending history with modernity.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/mushvig-niftaliyev-8ATbLUWpcZo-unsplash.jpg" alt="Santorini">
+                    <div class="destination-text">
+                        Santorini, a jewel of the Aegean Sea, is renowned for its breathtaking sunsets, whitewashed buildings, and crystal-clear waters. This idyllic Greek island offers stunning views from its clifftop villages of Fira and Oia, where narrow streets wind through vibrant blue-domed churches and charming shops. Relax on unique volcanic beaches like the Red Beach, explore the ancient ruins of Akrotiri, a Minoan Bronze Age settlement, or savor local wines produced from the island’s distinctive volcanic soil. With its romantic ambiance, traditional Greek cuisine, and picturesque scenery, Santorini is the perfect escape for a serene and unforgettable getaway that blends natural beauty with rich history.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="/peter-thomas-uQZH4a68pAg-unsplash.jpg" alt="Lake Como">
+                    <div class="destination-text">
+                        Lake Como, nestled in northern Italy, is a stunning destination renowned for its serene beauty and elegant charm. Surrounded by lush hills and picturesque villages, the lake offers breathtaking views that have inspired artists and travelers for centuries. Discover the charming villages of Bellagio and Varenna, where narrow streets are lined with boutique shops and cafes. Tour luxurious villas like Villa del Balbianello, with its magnificent gardens and panoramic views, and enjoy a leisurely boat ride across the lake, soaking in the tranquility. Visit the lush botanical gardens at Villa Carlotta, filled with vibrant flowers and ancient sculptures, or dine al fresco with stunning views of the Alps. With its tranquil atmosphere, rich cultural heritage, and unparalleled scenic splendor, Lake Como provides a perfect blend of relaxation and exploration, offering a retreat that’s both luxurious and soulful.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper pagination and navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Mailing List Section -->
+        <div class="mailing-list-section" id="mailing-list">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Subscribe to get exclusive travel tips, destination guides, and amazing deals delivered straight to your inbox.</p>
+            
+            <!-- Mailing List Form -->
+            <div class="mailing-list-container">
+                <form class="mailing-list-form">
+                    <input type="email" placeholder="e.g., email@example.com" required>
+                    <button type="submit">Join Our Travel Tribe</button>
+                </form>
+
+                <!-- Travel Benefits List -->
+                <ul class="travel-benefits">
+                    <li><i class="fa fa-plane"></i> Get the latest flight deals</li>
+                    <li><i class="fa fa-map-marker"></i> Discover hidden gems around the world</li>
+                    <li><i class="fa fa-sun"></i> Exclusive travel guides and tips</li>
+                </ul>
+                
+                <!-- Privacy Note -->
+                <p class="privacy-note">
+                    We respect your privacy. Read our <a href="privacy-policy.html">Terms & Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a> for more details.
+                </p>
+            </div>
+        </div>
+
+        <!-- Chat Assistant Widget -->
+        <div class="chat-assistant" id="chat-assistant">
+            <div class="chat-header">
+                <h3>Chat with Us!</h3>
+                <button class="close-chat" id="close-chat">X</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot-message">Hello! How can I assist you today? If you need help, just ask!</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+
+        <!-- Chatbot Icon -->
+        <div class="chatbot-icon" id="chatbot-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+
+        <!-- Swiper.js and custom scripts -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Link to your custom JavaScript file -->
+        <script src="moriTravels.js"></script>
+
+        <script>
+            // Toggle chat assistant visibility
+            function toggleChat() {
+                const chat = document.getElementById('chat-assistant');
+                chat.classList.toggle('active');
+            }
+
+            // Send user message and receive bot response
+            function sendMessage() {
+                const userInput = document.getElementById('user-input').value;
+                const chatBody = document.getElementById('chat-body');
+                
+                if (userInput.trim() === '') return; // Ignore empty messages
+
+                // Append user message to chat
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('chat-message', 'user-message');
+                userMessage.textContent = userInput;
+                chatBody.appendChild(userMessage);
+
+                // Clear input field
+                document.getElementById('user-input').value = '';
+
+                // Process and append bot response
+                const botResponse = processMessage(userInput);
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('chat-message', 'bot-message');
+                botMessage.textContent = botResponse;
+                chatBody.appendChild(botMessage);
+
+                // Scroll to the latest message
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            function processMessage(message) {
+                const lowerMessage = message.toLowerCase();
+                let response;
+
+                // Respond to various user inputs
+                if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                    response = 'Hello! How can I assist you today?';
+                } else if (lowerMessage.includes('book') || lowerMessage.includes('trip')) {
+                    response = 'I can help you plan your trip! Let\'s redirect you now...';
+                    window.location.href = 'plantrip.html';
+                } else if (lowerMessage.includes('price')) {
+                    response = 'I can provide a quote for your trip after you fill out the form.';
+                    window.location.href = 'plantrip.html';
+                } else if (lowerMessage.includes('services')) {
+                    response = 'I offer a range of travel services including transfers, flights & hotels, and more.';
+                } else {
+                    response = 'I\'m sorry, I didn\'t understand that. Could you please rephrase?';
+                }
+
+                return response;
+            }
+
+            // Event listeners for chat functionality
+            document.getElementById('chatbot-icon').addEventListener('click', toggleChat);
+            document.getElementById('close-chat').addEventListener('click', toggleChat);
+            document.getElementById('send-button').addEventListener('click', sendMessage);
+
+        </script>
+
+        <!-- Cookie Consent Popup -->
+        <div id="cookieConsent" class="cookie-consent">
+            <div class="cookie-consent-box">
+                <p>We use cookies to improve your experience on our site. By accepting, you agree to our use of cookies. <a href="#">Learn more</a></p>
+                <button id="acceptCookies" class="cookie-btn">Accept</button>
+                <button id="declineCookies" class="cookie-btn decline">Decline</button>
+            </div>
+        </div>
+
+        <script>
+            // Show cookie consent popup if not already accepted or declined
+            window.onload = function() {
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    document.getElementById('cookieConsent').style.display = 'block';
+                }
+            };
+
+            // Accept cookies
+            document.getElementById('acceptCookies').onclick = function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                document.getElementById('cookieConsent').style.display = 'none';
+            };
+
+            // Decline cookies
+            document.getElementById('declineCookies').onclick = function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                document.getElementById('cookieConsent').style.display = 'none';
+            };
+        </script>
+    </body>
+</html>

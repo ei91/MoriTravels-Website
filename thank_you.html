@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Submission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            overflow: hidden; /* Prevents scrollbars from appearing */
+        }
+        header {
+            background-color: rgba(33, 150, 243, 0.8);
+            padding: 20px;
+            position: relative; 
+            z-index: 1; /* Ensures header is above video */
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        h2 {
+            font-family: 'Roboto', sans-serif; /* Apply the same 'Pacifico' font */
+            font-size: 1.8rem ; 
+            margin: 20px 0;
+            color: #333;
+            font-weight: bolder;
+            background-position: center;
+
+        }
+        .container {
+            max-width: 600px;
+            margin: 150px auto; 
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #333;
+            position: relative;
+            z-index: 1; 
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: green;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+            position: relative; /* Needed for z-index */
+            z-index: 1; /* Ensures footer is above video */
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video covers the background */
+            z-index: 0; /* Sends video to the back */
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop>
+    <source src="/4328360-uhd_3840_2160_25fps.mp4" type="video/mp4"> 
+    Your browser does not support the video tag.
+</video>
+
+<header>
+    <h1>Thank You for Your Submission!</h1>
+</header>
+
+<div class="container">
+    <h2>Thank you for submitting your plan for your trip!</h2> 
+
+    <p>Mori will get back to you within 2-5 business working days.</p>
+    <p>We appreciate your trust in us to plan your holiday!</p>
+    <p>We strive to provide you with the best travel experience possible!</p>
+    
+    <div class="social-media">
+        <p>Follow us for travel tips and inspiration:</p>
+        <a href="https://www.facebook.com/MoriTravelExpert" target="_blank"><img src="/fb-icon.png" alt="Facebook"></a>
+        <a href="https://x.com/ExpertMori" target="_blank"><img src="/twitter_icon.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/moritravelexpert/" target="_blank"><img src="/insta-icon.png" alt="Instagram"></a>
+    </div>
+    
+    <a href="index.html" class="cta-button">Return to Home</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Mori Travel Agency. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

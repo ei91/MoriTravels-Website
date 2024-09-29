@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="moriTravels.css"> <!-- Reference to your CSS file -->
+    <link rel ="script" href= "moriTravels.js">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+<!-- Navigation bar fixed at the top -->
+ <style>
+    .page-background {
+background-image: url('/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 100px;
+
+}
+ </style>
+<nav>
+    <!-- Logo linked to moritravel.html -->
+    <a href="index.html"><img src="/M.png" alt="logo" class="logo"></a>
+    <div class="text-box">
+        <h1>Mori Travels</h1>
+    </div>
+    <div class="navigation-links">
+        <ul>
+            <li><a href="about-page.html"><i class="fas fa-info-circle"></i> About Me</a></li>
+            <li><a href="plantrip.html"><i class="fas fa-map-marked-alt"></i> Plan a Trip</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-globe"></i> Language</a> <!-- Globe icon for language -->
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')">English</a>
+                <a href="#" onclick="changeLanguage('zh')">中文 (Mandarin)</a>
+                <a href="#" onclick="changeLanguage('es')">Español (Spanish)</a>
+                <a href="#" onclick="changeLanguage('hi')">हिन्दी (Hindi)</a>
+                <a href="#" onclick="changeLanguage('ar')">العربية (Arabic)</a>
+                <a href="#" onclick="changeLanguage('pt')">Português (Portuguese)</a>
+                <a href="#" onclick="changeLanguage('bn')">বাংলা (Bengali)</a>
+                <a href="#" onclick="changeLanguage('ru')">Русский (Russian)</a>
+                <a href="#" onclick="changeLanguage('ja')">日本語 (Japanese)</a>
+                <a href="#" onclick="changeLanguage('fr')">Français (French)</a>
+                <a href="#" onclick="changeLanguage('de')">Deutsch (German)</a>
+            </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-bars"></i></a> <!-- Hamburger Icon -->
+                <div class="dropdown-content">
+                    <a href="leaveReview.html">Leave a Review</a>
+                    <a href="index.html#mailing-list">Join our Mailing List</a>
+                    <a href ="privacy-policy.html"> Private Policies</a>
+                </div>
+            </li>
+            <!-- Language Selector Dropdown -->
+        </ul>
+    </div>
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+     
+        <section class="page-background">
+            <br>
+            <br>
+        <!-- About Page Content Section -->
+        <div id="about-page" class="about-container">
+            <!-- About Content -->
+            <h1 id="h1">About Mori Idowu</h1>
+            <img src="/morifacepic.png" id="moriface" class="moriface">
+            <p>I have always enjoyed travelling, am well-travelled in personal life and most importantly have a passion for travel. I am recognised for my expertise in finding your ideal holiday and can make recommendation on a variety of destinations with information about local customs, attractions, travel requirements and currencies. Whether it is a Luxury Cruise, Worldwide Holiday, Honeymoon packages, Anniversary or Event Holiday, a last Minute break or a Special deal, I will find it for you.</p>
+            <p>I have organised numerous trips in the past for family and friends, corporate and work colleagues and have always received great reviews and feedback.</p>
+            <p>I have been to numerous destinations so far but one that remains in my memory was the Velassaru Maldives, this was an ideal holiday that meets all my needs with an adventure that is worthwhile. It was awesome and literally took my breath away.&nbsp; On a ridge taking in the peacefulness and taking in the vastness of it all will always stay with me.</p>
+            <p>
+                <strong>Service: Why book your holiday with me?</strong>
+            </p>
+            <p>
+                I will provide you with personal & professional services on package holidays (Luxury and Family Holidays), cruise, European city breaks round the world trips and much more. For further information/quote please contact me by email or via telephone and I will get back to you promptly with tempting offers and options.
+            </p>
+            <p>
+                <strong>Why Book Your Dream Honeymoon with me?</strong>
+            </p>
+            <p>
+                Your honeymoon is as special to me and it is to you, so I will ensure that everything is arranged with meticulous detail. I know each destination first hand and local knowledge is priceless when planning the perfect honeymoon.
+            </p>
+            <p>
+                All you need to do is let me know where and when you want to go, and I will put together unmissable itineraries and value for money quotations, and provide you with a very personal and professional advice.
+            </p>
+            <p>
+                <strong>Travel services</strong>
+            </p>
+            <p>I can arrange more travel services:</p>
+            <ul>
+                <li>Transfers</li>
+                <li>Travel to UK ports</li>
+                <li>Flights & Hotels</li>
+                <li>Any special requests</li>
+                <li>Parking (Airport Car Park)</li>
+                <li>Travel Insurance</li>
+                <li>Car Hire</li>
+                <li>Accommodation</li>
+                <li>Wedding Package Option, Anniversary</li>
+                <li>Birthday Package Option</li>
+                <li>Discounted Cruise Bookings</li>
+                <li>Worldwide</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p><strong>Flexibility</strong></p>
+            <p>"I provide a worldwide service so destination preference is wherever you want to go. I can also work to any budget, whether it is unlimited or on a more modest scale."</p>
+            <p>"Contact me now for your dream Cruise, Luxury and Family Holidays, also Special honeymoon and weddings in idyllic, beautiful beach settings."</p>
+        </div> 
+    </section>
+</body>
+
+</html>
